@@ -11,7 +11,7 @@
 
 ## Git Repos
 - [frontend git]() 
-- [backend git](https://github.com/koobcbc/project4-backend)
+- [backend git](https://github.com/koobcbc/readwatchrecord-backend)
 
 # Wireframs/Architecture
 - [WireFrame](https://www.figma.com/file/HL5L6aIwSGxrY9KnjjpSPg/ReadWatchRecord?node-id=0%3A1)
@@ -45,28 +45,24 @@
 | Total | H | 26.5hrs| 23hrs | 23hrs | 
 
 #### MVP
-- Create mongoDB using mongoose
-- Use the api created by mongoDB
+- Create PostgresDB using Ruby on Rails
+- Use the api created by PostgresDB & Google Books & Google Movie
 - Create components
 - Create Functionality for reading, adding, deleting, and updating
-- Allow user to input their selections for order
-- Allow user to navigate to past orders
+- Allow user to record reviews
+- Allow user to view/delete/update their past reviews
 #### PostMVP
 - Additional Styling and animations
-- Allow users to search by their name
 
 ## Components description
 - Header
-  - Shared component that sits at the top of the page and contains site title/tagline/logo
 - Nav
-  Shared component right below Header, contains links to the components Home, New Order, and Past-Orders
 - Home
-  - Simple landing page with graphic/tagline/eetc.
-- New Order
-   - Page with form that allows you to fill out your order. Options for names, toppings, cone, bowl,etc.
-- Past Orders
-   - The past orders will all be stored in the backend. This page will render a list of past orders with name and date. Clicking on an order will take you to an Order page.
-- Order
+- Authentication
+- NewBookReview
+- NewMovieReview
+- MyPage
+- PastReviews
   - Page that contains all the details of a specifiv past order.
 - About
   - This will be the "Team Page" with photos and descriptions of everyone that worked on the project
@@ -75,12 +71,9 @@
 
 
 # Backend Description
-- models/Schemas. (Alex, Joe)
+- models/Schemas
 
-- The Milkshakes Schema will contain keys with the value of flavor, toppings, size and price. The flavors, toppings and size values will be set to String and the value of price will be set to Number.
-- The Ice Cream Schema will contain keys that hold values of flavor, toppings, size that will all be set to strings. In addition to those we will also throw in a price value set to a number.
-- The Menu schema will hold a list of our menu items. The schema will contain values of flavor, toppings, holder and size, so that the frontend can pull that info and set up a menu in the app where users can see what options they have to choose from.
-- We will create three seperate controllers. One will contain the Schema and model for the milkshakes, the other holds the Ice Cream Schema and model, and the menu will function with the menu schema and model.
+
 
 # Additional libraries
 - Axios
