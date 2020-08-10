@@ -1,8 +1,8 @@
-# Project-4
+# ReadWatchRecord
 
 # Description
 
--   
+-   ReadWatchRecord is an application that allows users to record notes/review/stars/favorite quotes on any books/movies they have read/watched. The app keeps track of statistics of number of books/movies read/watched, and also gives a statistics on what type of books/movies you enjoy.
 
 
 # Project Links 
@@ -11,7 +11,7 @@
 
 ## Git Repos
 - [frontend git]() 
-- [backend git]()
+- [backend git](https://github.com/koobcbc/project4-backend)
 
 # Wireframs/Architecture
 - [WireFrame](https://www.figma.com/file/3PGHU4ez2A2nW7BCGAuUYr/icecream-app?node-id=12%3A4)
