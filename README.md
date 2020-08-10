@@ -14,21 +14,21 @@
 - [backend git](https://github.com/koobcbc/project4-backend)
 
 # Wireframs/Architecture
-- [WireFrame](https://www.figma.com/file/3PGHU4ez2A2nW7BCGAuUYr/icecream-app?node-id=12%3A4)
-- [React Architecture](https://imgur.com/vyTQGPH)
+- [WireFrame](https://www.figma.com/file/HL5L6aIwSGxrY9KnjjpSPg/ReadWatchRecord?node-id=0%3A1)
+- [React Architecture]()
 
 # Time Priority Matrix/Chart
   
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create Model | E | 1hr | 3hrs | 3hrs |
-| Create Controller | E | 2 hour | 4hrs | 4hrs |
-| Setup Server | E | .5hr| .5hrs | .5hrs |
-| Set up Conections  | E | .5hrs| .5hrs | .5hrs |
-| create Seed File  | M | 2hrs | 4hrs | 4hrs |
-| Research  | E | 2hrs| 4hrs | 4hrs |
-| Deployment  | H | 2hrs| 2hrs | 2hrs |
-| Total | H | 10hrs | 18hrs | 18hrs |
+| Create Model | E | 1hr | hrs | hrs |
+| Create Controller | E | 1 hour | hrs | hrs |
+| Setup Server | E | .5hr| hrs | hrs |
+| Set up Conections  | E | .5hrs| hrs | hrs |
+| create Seed File  | M | 2hrs | hrs | hrs |
+| Research  | E | 5hrs| hrs | hrs |
+| Deployment  | H | 1hr| hrs | hrs |
+| Total | H | 11hrs | hrs | hrs |
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
