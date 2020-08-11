@@ -1,0 +1,13 @@
+  [1m[35m (237.8ms)[0m  [1m[35mCREATE DATABASE "bookworm_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (120.0ms)[0m  [1m[35mCREATE DATABASE "bookworm_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (36.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (28.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3610414282255660215)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200811190034)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "nickname" character varying, "description" character varying, "profilePicture" character varying, "readingGoal" integer, "totalPageNum" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (3.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200811190034"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBooks (20200811192137)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3610414282255660215)[0m
