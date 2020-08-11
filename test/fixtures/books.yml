@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  authors: 
+  year: MyString
+  publisher: MyString
+  imageLinks: 
+  pageNumber: 1
+  description: MyText
+  language: MyString
+  categories: 
+  canonicalVolumeLink: MyString
+  starRating: 9.99
+  reviews: 
+  notes: 
+  quotes: 
+
+two:
+  title: MyString
+  authors: 
+  year: MyString
+  publisher: MyString
+  imageLinks: 
+  pageNumber: 1
+  description: MyText
+  language: MyString
+  categories: 
+  canonicalVolumeLink: MyString
+  starRating: 9.99
+  reviews: 
+  notes: 
+  quotes: 
