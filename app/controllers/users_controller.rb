@@ -12,9 +12,11 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    user_profile = @user.profile
-    user_books = @user.books
-    render json: { user: get_current_user, profile: user_profile, books: user_books }
+    # user_profile = @user.profile
+    # user_books = @user.books
+    # render json: { user: get_current_user, profile: user_profile, books: user_books }
+    render json: get_current_user.to_json(include: [:profile, :books])
+
   end
 
   # POST /users
