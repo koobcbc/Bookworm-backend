@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_08_12_110840) do
   enable_extension "plpgsql"
 
   create_table "books", force: :cascade do |t|
-    t.string "googleBooksId"
+    t.string "isbn"
     t.string "title"
     t.decimal "starRating"
     t.string "reviews", default: [], array: true
