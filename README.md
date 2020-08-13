@@ -48,7 +48,7 @@ rails g scaffold profile nickname description profilePicture readingGoal:integer
 
 Create lower level model
 ```bash
-rails g scaffold book googleBooksId starRating:decimal reviews:string[] notes:string[] quotes:string[] user_id:integer
+rails g scaffold book googleBooksId title starRating:decimal reviews:string[] notes:string[] quotes:string[] user_id:integer
 ```
 
 ## THIS CAN BE SKIPPED IF YOU ADDED FOREIGN KEYS (user_id in this case) ALREADY WHEN YOU GENERATED SCAFFOLDS
@@ -60,28 +60,39 @@ rails g migration AddForeignKeyToBooks
 
 For the migration that includes adding data type of arrays, make it into this syntax
 ```ruby
-class CreateBooks < ActiveRecord::Migration[6.0]
+class CreateProfiles < ActiveRecord::Migration[6.0]
   def change
-    create_table :books do |t|
-      t.string :title
-      t.string :authors, array: true, default: []
-      t.string :year
-      t.string :publisher
-      t.string :imageLinks, array: true, default: []
-      t.integer :pageNumber
-      t.text :description
-      t.string :language
-      t.string :categories, array: true, default: []
-      t.string :canonicalVolumeLink
-      t.decimal :starRating
-      t.string :reviews, array: true, default: []
-      t.string :notes, array: true, default: []
-      t.string :quotes, array: true, default: []
+    create_table :profiles do |t|
+      t.string :nickname
+      t.string :description
+      t.string :profilePicture
+      t.integer :readingGoal
+      t.integer :totalPageNum
+      t.integer :user_id
 
       t.timestamps
     end
   end
 end
+```
+
+```ruby
+class CreateBooks < ActiveRecord::Migration[6.0]
+  def change
+    create_table :books do |t|
+      t.string :googleBooksId
+      t.string :title
+      t.decimal :starRating
+      t.string :reviews, array: true, default: []
+      t.string :notes, array: true, default: []
+      t.string :quotes, array: true, default: []
+      t.integer :user_id
+
+      t.timestamps
+    end
+  end
+end
+
 ```
 -----------
 
@@ -104,7 +115,16 @@ The Schema has been created. Check the file
 **models/user.rb**
 ```ruby
 class User < ApplicationRecord
+    has_secure_password
+    has_one :profile
     has_many :books
+end
+```
+
+**models/profile.rb**
+```ruby
+class Profile < ApplicationRecord
+    belongs_to :user
 end
 ```
 
@@ -116,6 +136,210 @@ end
 ```
 
 # Create a seedfile
+
+`rails c` and in the console,
+```bash
+user = User.new( username: 'katy', password: 'katypw1')
+user.save
+```
+
+**config/routes.rb**
+Add a login route
+
+```ruby
+Rails.application.routes.draw do
+  resources :books
+  resources :profiles
+
+  resources :users do                                                            
+    collection do                                                                
+      post '/login', to: 'users#login'                                            
+    end                                                                          
+  end       
+                                
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+end
+```
+
+**controller/users_controller.rb**
+Add the following code to add the login action in the controller
+
+```ruby
+def login
+    user = User.find_by(username: params[:user][:username])
+    if user && user.authenticate(params[:user][:password])
+      render json: {status: 200, user: user}
+    else
+      render json: {status: 401, message: "Unauthorized"}
+    end
+end
+```
+
+Try POST in postman
+POST in `http://localhost:3000/users/login`
+- user[username]
+- user[password]
+
+Successful match will give status code 200.
+If unauthorized, it will give status code 401.
+
+# Tokens
+
+```ruby
+gem 'jwt'
+gem 'dotenv-rails'
+```
+- To generate and decode JSON Web Tokens on our Rails server.
+- To set Environment Variables for use in our JSON Web Tokens.
+
+run `bundle`
+
+## Generate a JWT
+We are generating JWT for the users so that they can be kept in 'stateless session'
+
+**users_controller.rb**
+Add this method under private.
+It will return a hash that will contain the payload including the user's id and username encrypted:
+
+```ruby
+  def payload(id, username)
+    {
+      exp: (Time.now + 30.minutes).to_i,
+      iat: Time.now.to_i,
+      iss: ENV['JWT_ISSUER'],
+      user: {
+        id: id,
+        username: username
+      }
+    }
+  end
+```
+
+Also under private in users_controller.rb, write a method that will create the token with the payload
+
+```ruby
+def create_token(id, username)
+  JWT.encode(payload(id, username), ENV['JWT_SECRET'], 'HS256')
+end
+```
+### ENV variables
+
+In the root of the repository (ex. bookworm_app_api)
+```bash
+touch .env
+touch .gitignore
+```
+
+Add `.env` to .gitignore file
+
+In your **.env** file, add the following code
+
+```ruby
+JWT_SECRET=whateversecretyouwant
+JWT_ISSUER=whoeveryouwant
+```
+
+## Generate a Token
+In the login route in **users_controller.rb**, write the following code in order to create a token (Full code of the method is below)
+This will send a token to our user when they authenticate
+```ruby
+  token = create_token(user.id, user.username)
+```
+
+```ruby
+  def login                                                                        
+    user = User.find_by(username: params[:user][:username])                        
+    if user && user.authenticate(params[:user][:password])                         
+      token = create_token(user.id, user.username)                                 
+      render json: { status: 200, token: token, user: user }                       
+    else                                                                           
+      render json: { status: 401, message: "Unauthorized" }                        
+    end                                                                            
+  end 
+```
+
+# ACCESS: AUTHENTICATE ROUTES
+## Authentication methods
+
+Let's write a method that is available to all of our controllers that will authenticate the JWT, and tell us if the user is allowed.
+
++ Currently logged in user (get_current_user method in appication_controller.rb)
+
+**app/controllers/application_controller.rb**
+```ruby
+  class ApplicationController < ActionController::API
+                                                                
+  def authenticate_token
+        # puts "AUTHENTICATE JWT"
+        render json: { status: 401, message: 'Unauthorized' } unless decode_token(bearer_token)
+    end
+  
+    def bearer_token
+        # puts "BEARER TOKEN"
+        header = request.env["HTTP_AUTHORIZATION"]
+
+        pattern = /^Bearer /
+        # puts "TOKEN WITHOUT BEARER"
+        header.gsub(pattern, '') if header && header.match(pattern)
+    end
+  
+    def decode_token(token_input)
+        # puts "DECODE TOKEN, token input: #{token_input}"
+        # token = 
+        JWT.decode(token_input, ENV['JWT_SECRET'], true)
+        # render json: { decoded: token }
+    rescue
+        render json: { status: 401, message: 'Unauthorized' }                          
+    end
+
+    def get_current_user 
+        return if !bearer_token   
+        decoded_jwt = decode_token(bearer_token) 
+        User.find(decoded_jwt[0]["user"]["id"])
+    end
+
+end 
+```
+
+## Currently logged in user
+
+**app/controllers/users_controller.rb**
+In the show route, add,
+```ruby
+def show
+  render json: get_current_user
+end
+```
+
+## Authorization
+
+In **application_controller.rb** under private
+```ruby
+def authorize_user
+  render json: { status: 401, message: "Unauthorized" } unless get_current_user.id == params[:id].to_i       
+end
+```
+
+In **users_controller.rb** on the top, add the following line
+
+```ruby
+  before_action :authorize_user, except: [:login, :create, :index]
+```
+- Create a second user in Rails console
+```bash
+User.create( username: 'Gollum', password: 'Gollum' )
+```
+
+**app/users_controllers.rb**
+```ruby
+  class UsersController < ApplicationController
+    before_action :set_user, only: [:show, :update, :destroy]
+    before_action :authenticate_token, except: [:login, :create]
+
+    ...
+    ...
+  end
+```
 
 **db/migrate/seeds.rb**
 ```ruby
