@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_12_102142) do
+ActiveRecord::Schema.define(version: 2020_08_12_110840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "books", force: :cascade do |t|
+    t.string "googleBooksId"
+    t.string "title"
+    t.decimal "starRating"
+    t.string "reviews", default: [], array: true
+    t.string "notes", default: [], array: true
+    t.string "quotes", default: [], array: true
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "nickname"
+    t.string "description"
+    t.string "profilePicture"
+    t.integer "readingGoal"
+    t.integer "totalPageNum"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
