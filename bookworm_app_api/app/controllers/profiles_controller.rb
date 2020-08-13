@@ -10,6 +10,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1
   def show
+    # profile_books = @profile.books
     render json: @profile
   end
 

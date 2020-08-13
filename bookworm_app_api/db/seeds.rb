@@ -6,13 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 Profile.create([
   { 
     nickname: "Katy",
     description: "College Student who likes to read fiction novel",
     profilePicture: "https://lumiere-a.akamaihd.net/v1/images/c94eed56a5e84479a2939c9172434567c0147d4f.jpeg?region=0,0,600,600",
     readingGoal: 10,
-    totalPageNum: 780
+    totalPageNum: 780,
+    user_id: 1
   }
 ])
 
