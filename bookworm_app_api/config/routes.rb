@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   resources :users do                                                            
     collection do                                                                
-      post '/login', to: 'users#login'                                            
+      post '/login', to: 'users#login'
+      get '/auto_login', to: 'users#auto_login'                                  
     end                                                                          
   end       
                                 
