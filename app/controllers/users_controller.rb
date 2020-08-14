@@ -23,6 +23,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
+    if params['user']['password'].length < 6
+      render json: {
+        status: "Password Must be at least 6 characters long"
+      }
+    end
+
     if @user.save
       render json: @user, status: :created, location: @user
     else
@@ -44,6 +50,7 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+  # /users/login
   def login                                                                        
     user = User.find_by(username: params[:user][:username])                        
     if user && user.authenticate(params[:user][:password])                         
@@ -72,7 +79,7 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :password_digest)
+      params.require(:user).permit(:username, :password)
     end
 
     def payload(id, username)
