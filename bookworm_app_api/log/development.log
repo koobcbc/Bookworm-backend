@@ -2240,3 +2240,516 @@ Processing by UsersController#create as */*
 Completed 201 Created in 267ms (Views: 0.9ms | ActiveRecord: 2.4ms | Allocations: 2625)
 
 
+Started POST "/users" for ::1 at 2020-08-15 05:15:19 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$o4eaGNavFanExsKyrbR5VuxV/52hkHyZGiOJUiMrgIrhNs6xZGa16"], ["created_at", "2020-08-14 20:15:19.618822"], ["updated_at", "2020-08-14 20:15:19.618822"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 292ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 2625)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:15:31 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$PAVMQ9whhuZHDoA0WOUsuu7e4AqC8um04.tNl35i.ejiEiSmw4jW2"], ["created_at", "2020-08-14 20:15:31.611945"], ["updated_at", "2020-08-14 20:15:31.611945"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 289ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 2625)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:16:31 +0900
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$vPYlAihfektaeQyfpyNx9eCitpLeTBkt7.LLIL.Qeb.uW1VrL1YpC"], ["created_at", "2020-08-14 20:16:31.764916"], ["updated_at", "2020-08-14 20:16:31.764916"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 276ms (Views: 0.8ms | ActiveRecord: 9.3ms | Allocations: 8431)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-08-15 05:18:24 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$6v7XYAN3c8JGhQ8p82IZsu7jMmrHTmoMnOe/1FzK2Recb0qb5jyy6"], ["created_at", "2020-08-14 20:18:25.246581"], ["updated_at", "2020-08-14 20:18:25.246581"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 453ms (Views: 1.5ms | ActiveRecord: 2.6ms | Allocations: 2649)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:18:27 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$Dz.YAUa.oHtMeZK9uD2YC.sq0y3ZczDSSft5Gr69N/v7oTu8PWYnK"], ["created_at", "2020-08-14 20:18:28.048391"], ["updated_at", "2020-08-14 20:18:28.048391"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 645ms (Views: 1.0ms | ActiveRecord: 1.9ms | Allocations: 2645)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:18:32 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$WS9VA1MUo1AQ8VmCcMn5wuve5G2zSwWOMEY/HL6065/u8DmeJwWNG"], ["created_at", "2020-08-14 20:18:32.942652"], ["updated_at", "2020-08-14 20:18:32.942652"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 369ms (Views: 0.6ms | ActiveRecord: 2.7ms | Allocations: 2650)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:18:49 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"test4", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test4"], ["password_digest", "$2a$12$sZH/euDUCvlEthH4EJjeveaGq86wkXlZxYp4sqCCG7ZLQp2ecV0ge"], ["created_at", "2020-08-14 20:18:49.987861"], ["updated_at", "2020-08-14 20:18:49.987861"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 266ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 2628)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2020-08-15 05:20:45 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$SpperfOHYBDzuS.ZPuMuyezyCCJA/0c7gGCfHVyxWwXgYQLqLtY9O"], ["created_at", "2020-08-14 20:20:45.594152"], ["updated_at", "2020-08-14 20:20:45.594152"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 575ms (Views: 0.5ms | ActiveRecord: 3.6ms | Allocations: 2631)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:20:55 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$gnUD1tmSnXAw8ZA/ilfC/.l3M7Plyvsnzdm4XCfYtFRkvHVXaw6Iy"], ["created_at", "2020-08-14 20:20:55.790269"], ["updated_at", "2020-08-14 20:20:55.790269"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 382ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 2632)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:21:20 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$cz14cFoz4YDCQLZBI9xvgudUWeyyRzpwPTEqdX9gzfYuc1U/1ltHy"], ["created_at", "2020-08-14 20:21:21.905014"], ["updated_at", "2020-08-14 20:21:21.905014"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 1042ms (Views: 0.9ms | ActiveRecord: 2.1ms | Allocations: 2632)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:21:22 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$aHGqBtgUWJ4pu9w9ebQVCeSP.OyulWw4rI6oWs6iovvL7zCZkZtdq"], ["created_at", "2020-08-14 20:21:22.638810"], ["updated_at", "2020-08-14 20:21:22.638810"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 636ms (Views: 1.2ms | ActiveRecord: 3.1ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:21:28 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$PUQadjRcfbUvEyoxhphVNuEqKACQ0yRqdhHf5YoPnOX0gX1PYBnhm"], ["created_at", "2020-08-14 20:21:28.715163"], ["updated_at", "2020-08-14 20:21:28.715163"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 407ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:24:29 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$9Crtdrk3mD3.B8PCft976.3EGqo5hFx5gWxOcxsKi1HGRtc8JXab."], ["created_at", "2020-08-14 20:24:29.830779"], ["updated_at", "2020-08-14 20:24:29.830779"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 521ms (Views: 1.0ms | ActiveRecord: 3.7ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:37:38 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$YBxksn6myeYalc2JGwH3C.lKQ977d.RHa79ZFbQvk0T9SJBYcj0nu"], ["created_at", "2020-08-14 20:37:39.363678"], ["updated_at", "2020-08-14 20:37:39.363678"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 526ms (Views: 3.2ms | ActiveRecord: 4.9ms | Allocations: 2649)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:37:43 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$Q32fSVz1Cphy1AYJA10FeeEsKYsVS30lGvOUJyZWi/RTL5p7Uo5p6"], ["created_at", "2020-08-14 20:37:44.267582"], ["updated_at", "2020-08-14 20:37:44.267582"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 847ms (Views: 2.1ms | ActiveRecord: 2.1ms | Allocations: 2645)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:37:44 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$mOxiGtfirbNCMnW5A7h0bOTqMEDoHLLaX5OMHYJ.5kMK8guzcpSka"], ["created_at", "2020-08-14 20:37:45.209605"], ["updated_at", "2020-08-14 20:37:45.209605"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 428ms (Views: 0.5ms | ActiveRecord: 4.3ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:37:47 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$EDs1FcHAuw6o/dOtdig2j.el4XKdHqpcddr5pW1rf5decyQGz0Jc6"], ["created_at", "2020-08-14 20:37:48.743664"], ["updated_at", "2020-08-14 20:37:48.743664"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 1275ms (Views: 0.4ms | ActiveRecord: 6.4ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:37:49 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$xgn/4CkLdRDs7Z6cOYSarOPebONlnr6xKa1J1pE4YqUAjJbs0R88m"], ["created_at", "2020-08-14 20:37:50.480248"], ["updated_at", "2020-08-14 20:37:50.480248"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 1326ms (Views: 0.5ms | ActiveRecord: 8.1ms | Allocations: 2632)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:37:50 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$s/NVW1HPyj7dQkEUYe7M3OvmIEJFO7qeWDK/GIrdBjaRBS6Qs5cMK"], ["created_at", "2020-08-14 20:37:51.843044"], ["updated_at", "2020-08-14 20:37:51.843044"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 1062ms (Views: 1.3ms | ActiveRecord: 1.6ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:37:52 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$C900QYlZXTPL26a2fkzmTOhbNJsT1U8cQNsM0Pf/QVM8r.fcdhoK."], ["created_at", "2020-08-14 20:37:52.747301"], ["updated_at", "2020-08-14 20:37:52.747301"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 701ms (Views: 0.7ms | ActiveRecord: 1.6ms | Allocations: 2631)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:38:28 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$OrX4YhVwDan4DNmZnJBf/.2caDi/jTg85LZt9Kniluf7thxymmePq"], ["created_at", "2020-08-14 20:38:28.581805"], ["updated_at", "2020-08-14 20:38:28.581805"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 546ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:42:15 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$f5/hiBYVSSPixjLRJTVj7erQzxBfxdbmclmKaZiuJ1A2axzf24HCW"], ["created_at", "2020-08-14 20:42:16.013785"], ["updated_at", "2020-08-14 20:42:16.013785"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 422ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 2631)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:43:01 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$aCtYmLmWZ/QqBSa/m1P/D.S4hr3QVw.6rmqAvTzXZFagL0eGa7zmK"], ["created_at", "2020-08-14 20:43:02.427251"], ["updated_at", "2020-08-14 20:43:02.427251"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 927ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:43:15 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (14.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (4.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$NO0xw0oNodacKoEYOIKgHOEwi7M2/Zg/VQ4vkT0UgQ9eSGyzc.gQi"], ["created_at", "2020-08-14 20:43:16.214497"], ["updated_at", "2020-08-14 20:43:16.214497"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 1033ms (Views: 0.8ms | ActiveRecord: 25.2ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:45:25 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$ERDqQ3yd95.f7kCSdtbvNOKndpvorDc.mp/xBWXZO0u56C/pc6F7C"], ["created_at", "2020-08-14 20:45:26.219289"], ["updated_at", "2020-08-14 20:45:26.219289"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 852ms (Views: 0.6ms | ActiveRecord: 4.8ms | Allocations: 2632)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:45:29 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$QPaP0F5tQ6CLTlXmlORqxur.JY7du9bJDvRM2MsvkNkNNehBwZxkq"], ["created_at", "2020-08-14 20:45:30.536295"], ["updated_at", "2020-08-14 20:45:30.536295"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 801ms (Views: 0.7ms | ActiveRecord: 2.2ms | Allocations: 2632)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:48:29 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$GZm23JmNoleGHVcjUa37ReX4kGbdjvginwDwrlDHI9yXgNhyPpwum"], ["created_at", "2020-08-14 20:48:30.710440"], ["updated_at", "2020-08-14 20:48:30.710440"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 773ms (Views: 2.1ms | ActiveRecord: 6.8ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:49:22 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (13.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$gQ8qanMP0PHVSeLpwAstyOIzmQ7l2Q.On3mWGRysExApmq9T2Kjm6"], ["created_at", "2020-08-14 20:49:23.632037"], ["updated_at", "2020-08-14 20:49:23.632037"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 869ms (Views: 0.7ms | ActiveRecord: 15.5ms | Allocations: 2632)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:49:33 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (8.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$Wjgz4TP3Ja44qIwYCKdUnuuRRNYYZwjEfSXSD820sq2nEM/nEZuim"], ["created_at", "2020-08-14 20:49:34.498585"], ["updated_at", "2020-08-14 20:49:34.498585"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 1004ms (Views: 0.5ms | ActiveRecord: 20.6ms | Allocations: 2632)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:49:38 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$LV9Ih6vQyzNOlTrXfzAxoeIeJu9b3OIucCErrn4Xqqbt0rkDIyH1i"], ["created_at", "2020-08-14 20:49:39.360923"], ["updated_at", "2020-08-14 20:49:39.360923"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 433ms (Views: 0.6ms | ActiveRecord: 3.2ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:49:52 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$vkTHadN/wlac1oBtkffjP.rexoLFPf3GbNriVU37OSi6mwEmnAYWu"], ["created_at", "2020-08-14 20:49:53.883940"], ["updated_at", "2020-08-14 20:49:53.883940"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 962ms (Views: 0.7ms | ActiveRecord: 3.4ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:49:54 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$TDKyAdjFnk867yfFugaOuOn6IHqRCoSa2wFSy.Xb7CxVOVhdOpLWq"], ["created_at", "2020-08-14 20:49:54.997059"], ["updated_at", "2020-08-14 20:49:54.997059"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 509ms (Views: 0.5ms | ActiveRecord: 3.7ms | Allocations: 2632)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:50:04 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$fX1FIAuedHBmc7BW4hQIB.eHbkzbPRVI5Hozhe8gINzumuT8zOWnC"], ["created_at", "2020-08-14 20:50:04.721361"], ["updated_at", "2020-08-14 20:50:04.721361"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 452ms (Views: 0.4ms | ActiveRecord: 2.1ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:53:31 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$iIvyJIuZPQN7mGDtqW8oIuiVUTaE/8JbYiZw9JwpoZvz1ONrQoqCq"], ["created_at", "2020-08-14 20:53:32.164566"], ["updated_at", "2020-08-14 20:53:32.164566"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 634ms (Views: 0.4ms | ActiveRecord: 3.1ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:53:36 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$sQelo0cOhzDYFIaEXtG09ePrapTXGNc/O0FaOFO2EIQIu3NMrRoLO"], ["created_at", "2020-08-14 20:53:37.151884"], ["updated_at", "2020-08-14 20:53:37.151884"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 465ms (Views: 10.4ms | ActiveRecord: 3.5ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:53:39 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$k8KdzrARIEj/tkI4y1YyR.vJJMKs/GpJnYZOCdSh653A5vg4kurRO"], ["created_at", "2020-08-14 20:53:40.074158"], ["updated_at", "2020-08-14 20:53:40.074158"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 552ms (Views: 0.7ms | ActiveRecord: 8.5ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:53:46 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$rVXNNMz6oGOL2RN8071nM.dDq8OujdwFC1on02efiEfAJ3Tiy.ciK"], ["created_at", "2020-08-14 20:53:46.808002"], ["updated_at", "2020-08-14 20:53:46.808002"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 683ms (Views: 0.5ms | ActiveRecord: 6.2ms | Allocations: 2629)
+
+
+Started POST "/users" for ::1 at 2020-08-15 05:55:10 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"test 5", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test 5"], ["password_digest", "$2a$12$JYSbs4g6ZeTQYANZ4Lx2KuZZlbtdIrXV0cZtpabDJKZ53K37Cgzzq"], ["created_at", "2020-08-14 20:55:10.439129"], ["updated_at", "2020-08-14 20:55:10.439129"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 277ms (Views: 0.5ms | ActiveRecord: 1.8ms | Allocations: 2630)
+
+
+  [1m[36mUser Exists? (5.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2020-08-15 05:56:38 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (5.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$OMg5w05oi2E1hv.z85cTSucVEL58z.cUyCBl2zQwhczwBYJwB3iyq"], ["created_at", "2020-08-14 20:56:38.746841"], ["updated_at", "2020-08-14 20:56:38.746841"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 529ms (Views: 0.6ms | ActiveRecord: 6.6ms | Allocations: 2629)
+
+
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2020-08-15 05:59:29 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"undefined", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "undefined"], ["password_digest", "$2a$12$pSSn0fwQtfNzPEoVv2gI9O16QOoaCoMt45M3m4Ro3/b6LbwSL3qYK"], ["created_at", "2020-08-14 20:59:30.251847"], ["updated_at", "2020-08-14 20:59:30.251847"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 479ms (Views: 0.5ms | ActiveRecord: 2.3ms | Allocations: 2632)
+
+
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2020-08-15 06:01:19 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"kjsbff", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "kjsbff"], ["password_digest", "$2a$12$PKRdxy8QN0eVGqX4T7Ajb.KGJbj.m3oSK/exKn3./gQRO.5IjS4em"], ["created_at", "2020-08-14 21:01:20.277677"], ["updated_at", "2020-08-14 21:01:20.277677"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 300ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2628)
+
+
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
