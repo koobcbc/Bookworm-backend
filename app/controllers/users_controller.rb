@@ -54,6 +54,16 @@ class UsersController < ApplicationController
     end                                                                            
   end 
 
+  # delete if error occurs
+  def auto_login
+    if session_user
+      render json: session_user
+    else
+      render json: {errors: "No User Logged In"}
+    end
+  end
+  # 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

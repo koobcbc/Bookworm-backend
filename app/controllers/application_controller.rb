@@ -32,5 +32,17 @@ class ApplicationController < ActionController::API
     def authorize_user
         render json: { status: 401, message: "Unauthorized" } unless get_current_user.id == params[:id].to_i       
     end
+
+    # delete if error occurs
+    def session_user
+        decoded_hash = decoded_token
+        if !decoded_hash.empty?
+            user_id = decoded_hash[0]['user_id']
+            @user = User.find_by(id: user_id)
+        else
+            nil
+        end
+    end
+    # 
   
   end
