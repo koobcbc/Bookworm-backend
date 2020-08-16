@@ -4452,3 +4452,17 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 1.4ms | Allocations: 1914)
 
 
+Started GET "/books" for ::1 at 2020-08-17 04:43:40 +0900
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 15.9ms | ActiveRecord: 8.9ms | Allocations: 10684)
+
+
+Started GET "/" for ::1 at 2020-08-17 04:49:33 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
