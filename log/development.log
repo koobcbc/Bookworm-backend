@@ -2753,3 +2753,444 @@ Completed 201 Created in 300ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations
 
   [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2020-08-15 06:05:41 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"test8", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test8"], ["password_digest", "$2a$12$1iG7Iyiu/KntPbTJLEWD4umglU8t3poIi.PtZmLwPNgj4sFuu1poO"], ["created_at", "2020-08-14 21:05:42.212278"], ["updated_at", "2020-08-14 21:05:42.212278"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 280ms (Views: 0.7ms | ActiveRecord: 2.4ms | Allocations: 2628)
+
+
+Started POST "/users" for ::1 at 2020-08-15 06:08:04 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"test9", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test9"], ["password_digest", "$2a$12$L14ALkA2s76lu862DXEJbu3mUrI4t3zyOgGuWZScvWny38EH3jBe6"], ["created_at", "2020-08-14 21:08:05.173354"], ["updated_at", "2020-08-14 21:08:05.173354"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 277ms (Views: 0.5ms | ActiveRecord: 1.8ms | Allocations: 2631)
+
+
+Started POST "/users" for ::1 at 2020-08-15 06:10:49 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"test10", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test10"], ["password_digest", "$2a$12$/de/NKu9ol7/8Lv59HEsreldsMxf72ALJ/pSR/hs19SuASvBLwEiq"], ["created_at", "2020-08-14 21:10:50.586359"], ["updated_at", "2020-08-14 21:10:50.586359"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 609ms (Views: 1.3ms | ActiveRecord: 3.2ms | Allocations: 2630)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 06:48:51 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 305ms (Views: 1.5ms | ActiveRecord: 1.5ms | Allocations: 2684)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 06:49:40 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 270ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 946)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 06:50:51 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 463ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 728)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 06:50:59 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 282ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 728)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 06:51:59 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 415ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 944)
+
+
+Started GET "/users/1" for ::1 at 2020-08-15 07:05:02 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 18ms (Views: 1.6ms | ActiveRecord: 3.0ms | Allocations: 980)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 07:05:08 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 433ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 949)
+
+
+Started GET "/users/1" for ::1 at 2020-08-15 07:05:19 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (3.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (3.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 171ms (Views: 0.1ms | ActiveRecord: 25.6ms | Allocations: 22503)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 07:13:18 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 268ms (Views: 2.7ms | ActiveRecord: 3.1ms | Allocations: 1030)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 07:14:49 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 264ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 946)
+
+
+Started GET "/users/1" for ::1 at 2020-08-15 07:14:50 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 41ms (Views: 0.1ms | ActiveRecord: 3.7ms | Allocations: 4884)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 07:18:44 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 260ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 727)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 07:19:07 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 262ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 727)
+
+
+Started POST "/users" for ::1 at 2020-08-15 07:19:41 +0900
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"testing", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "testing"], ["password_digest", "$2a$12$0B7IerJdKNVI/yga9us3.ORINt3/DJYvqxifZiB4YmTwy4V4ZxArm"], ["created_at", "2020-08-14 22:19:41.701428"], ["updated_at", "2020-08-14 22:19:41.701428"]]
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+Completed 201 Created in 333ms (Views: 1.0ms | ActiveRecord: 5.8ms | Allocations: 2629)
+
+
+Started POST "/users/login" for ::1 at 2020-08-15 07:19:47 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"testing", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testing"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 254ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 944)
+
+
+Started GET "/users/52" for ::1 at 2020-08-15 07:19:47 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (2.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (4.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 52]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 10.2ms | Allocations: 3736)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:18:40 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 285ms (Views: 4.8ms | ActiveRecord: 2.0ms | Allocations: 1036)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:18:41 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (2.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (2.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 55ms (Views: 0.1ms | ActiveRecord: 5.5ms | Allocations: 4883)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:19:02 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 263ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 727)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:20:43 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 288ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 948)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:20:43 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 4812)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:20:59 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 261ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 727)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:43:13 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 303ms (Views: 1.0ms | ActiveRecord: 2.0ms | Allocations: 812)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:43:21 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 270ms (Views: 0.2ms | ActiveRecord: 3.9ms | Allocations: 727)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:43:26 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 287ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 944)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:43:26 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (3.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 5.6ms | Allocations: 4883)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:44:07 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 296ms (Views: 0.9ms | ActiveRecord: 3.8ms | Allocations: 946)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:44:07 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 6.9ms | Allocations: 4811)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:45:26 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 272ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 944)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:45:26 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (1.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 48ms (Views: 0.1ms | ActiveRecord: 9.8ms | Allocations: 4811)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:46:37 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 279ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 944)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:46:37 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 41ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 4811)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:49:32 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 282ms (Views: 8.0ms | ActiveRecord: 2.1ms | Allocations: 944)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:49:33 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (1.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 87ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 4814)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:49:39 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 277ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 945)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:49:40 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 4811)
+
+
+Started POST "/users/login" for ::1 at 2020-08-16 20:50:23 +0900
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"katy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "katy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `login'
+Completed 200 OK in 258ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 944)
+
+
+Started GET "/users/1" for ::1 at 2020-08-16 20:50:24 +0900
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:77:in `set_user'
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `get_current_user'
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 9.6ms | Allocations: 4811)
+
+
