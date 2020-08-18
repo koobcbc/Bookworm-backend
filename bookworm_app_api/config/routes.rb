@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   resources :books
   resources :profiles
 
-  resources :users do                                                            
+  resources :users do  
+    resources :books, only: [:create, :update] 
+    resources :profiles, only: [:create, :update]                                                            
     collection do                                                                
       post '/login', to: 'users#login'
-      get '/auto_login', to: 'users#auto_login'                                  
+      get '/auto_login', to: 'users#auto_login'                                 
     end                                                                          
   end       
                                 

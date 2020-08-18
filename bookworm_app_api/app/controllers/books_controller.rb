@@ -16,6 +16,7 @@ class BooksController < ApplicationController
   # POST /books
   def create
     @book = Book.new(book_params)
+    @book.user_id = params[:user_id]
 
     if @book.save
       render json: @book, status: :created, location: @book
