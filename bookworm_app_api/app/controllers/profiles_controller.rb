@@ -17,6 +17,7 @@ class ProfilesController < ApplicationController
   # POST /profiles
   def create
     @profile = Profile.new(profile_params)
+    @profile.id = params[:user_id]
     @profile.user_id = params[:user_id]
 
     if @profile.save
