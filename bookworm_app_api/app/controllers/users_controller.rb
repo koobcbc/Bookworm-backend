@@ -62,13 +62,13 @@ class UsersController < ApplicationController
   end 
 
   # delete if error occurs
-  def auto_login
-    if session_user
-      render json: session_user
-    else
-      render json: {errors: "No User Logged In"}
-    end
-  end
+  # def auto_login
+  #   if session_user
+  #     render json: session_user
+  #   else
+  #     render json: {errors: "No User Logged In"}
+  #   end
+  # end
   # 
 
   private
