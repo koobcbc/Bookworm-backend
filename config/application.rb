@@ -21,8 +21,6 @@ Bundler.require(*Rails.groups)
 
 module BookwormAppApi
   class Application < Rails::Application
-    "Access-Control-Allow-Origin" : "*", 
-    "Access-Control-Allow-Credentials" : true 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
