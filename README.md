@@ -9,7 +9,7 @@ If you want to remove the app for some reason.
 rm -rf bookworm_app_api
 ```
 
-`cd temperatures_app_api` and Create database
+`cd bookworm_app_api` and Create database
 ```bash
 rails db:create
 ```
