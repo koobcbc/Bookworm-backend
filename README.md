@@ -422,6 +422,23 @@ Book.create([
     }
 ])
 ```
+-------------
+Seed Data
+```
+rails db:seed
+```
+### If the database needs to be reseeded
+```
+rails db:reset
+```
+This drop, create, migrate, and seed the database again
+In **rails c**,
+```
+User.create( username: 'katy1', password: 'katypw1' )
+User.create( username: 'katy2', password: 'katypw2' )
+
+```
+
 -----------
 ## Check the Seed Data
 
