@@ -82,6 +82,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
   def change
     create_table :books do |t|
       t.string :googleBooksId
+      t.string :isbn
       t.string :title
       t.decimal :starRating
       t.string :reviews, array: true, default: []
