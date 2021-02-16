@@ -469,7 +469,12 @@ User.all
 Book.all
 ```
 
-
+--------
+Check the seeding (Part II)
+**rails s** to start the server (default: 3000)
+Go to "http://localhost:3000/profiles"
+or "http://localhost:3000/books"
+To check the seeding of profile and books
 
 
 
