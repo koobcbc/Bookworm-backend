@@ -442,6 +442,7 @@ User.create( username: 'katy2', password: 'katypw2' )
 
 ```
 Create Users then
+**> quit**
 ```
 rails db:seed
 ```
