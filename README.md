@@ -421,6 +421,28 @@ Book.create([
     }
 ])
 ```
+-----------
+## Check the Seed Data
+
+### Make your console look nicer
+**gem 'hirb'**
+or 
+**gem 'awesome-print'**
+**bundle** in Terminal
+In rails console (**rails c**)
+```
+> require('hirb')
+> Hirb.enable
+```
+-------------
+In terminal
+**rails c**
+```
+Profile.all
+User.all
+Book.all
+```
+
 
 
 
