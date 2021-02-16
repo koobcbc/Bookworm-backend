@@ -427,9 +427,12 @@ Seed Data
 ```
 rails db:seed
 ```
-### If the database needs to be reseeded
+### If the database needs to be resetted
 ```
 rails db:reset
+# This includes the seeding part
+rails db:drop db:create db:migrate
+# This excludes the seeding part (For the purpose, we will use THIS because we need to create user/password combinations first before seeding)
 ```
 This drop, create, migrate, and seed the database again
 In **rails c**,
@@ -437,6 +440,10 @@ In **rails c**,
 User.create( username: 'katy1', password: 'katypw1' )
 User.create( username: 'katy2', password: 'katypw2' )
 
+```
+Create Users then
+```
+rails db:seed
 ```
 
 -----------
