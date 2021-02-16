@@ -163,7 +163,7 @@ Rails.application.routes.draw do
 end
 ```
 
-**controller/users_controller.rb**
+**app/controller/users_controller.rb**
 Add the following code to add the login action in the controller
 
 ```ruby
@@ -247,7 +247,7 @@ This will send a token to our user when they authenticate
 ```ruby
   token = create_token(user.id, user.username)
 ```
-
+This can be included in the following code
 ```ruby
   def login                                                                        
     user = User.find_by(username: params[:user][:username])                        
