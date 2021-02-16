@@ -51,14 +51,15 @@ Create lower level model
 rails g scaffold book googleBooksId title starRating:decimal reviews:string[] notes:string[] quotes:string[] user_id:integer
 ```
 
-## THIS CAN BE SKIPPED IF YOU ADDED FOREIGN KEYS (user_id in this case) ALREADY WHEN YOU GENERATED SCAFFOLDS
+### THIS CAN BE SKIPPED IF YOU ADDED FOREIGN KEYS (user_id in this case) ALREADY WHEN YOU GENERATED SCAFFOLDS
 -----------
 Add Foreign Key To lower level model (books)
 ```bash
 rails g migration AddForeignKeyToBooks
 ```
+----------
 
-For the migration that includes adding data type of arrays, make it into this syntax
+For the migration that includes adding data type of arrays, make it into this syntax (in app/db/migrate/[files])
 ```ruby
 class CreateProfiles < ActiveRecord::Migration[6.0]
   def change
@@ -96,7 +97,7 @@ end
 ```
 -----------
 
-## Add Foreign Key To Higher Level model (through migration file)
+## Add Foreign Key To Higher Level model (through migration file) CAN BE SKIPPED since user_id is added in the previous migration
 For the migration of adding foreign key to books, add the add_column line
 ```ruby
 class AddForeignKeyToBooks < ActiveRecord::Migration[6.0]
@@ -105,6 +106,7 @@ class AddForeignKeyToBooks < ActiveRecord::Migration[6.0]
   end
 end
 ```
+----------
 
 ```bash
 rails db:migrate
