@@ -477,7 +477,28 @@ or "http://localhost:3000/books"
 To check the seeding of profile and books
 
 
+--------
+## Configure CORS
 
+uncomment the line in **Gemfile.rb**
+```
+gem 'rack-cors'
+```
+**bundle**
+In **config/initializers/cors.rb**
+uncomment
+```
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins '*'
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
+```
+Rerun **rails s**
 
 
 
