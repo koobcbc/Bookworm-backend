@@ -89,6 +89,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :notes, array: true, default: []
       t.string :quotes, array: true, default: []
       t.integer :user_id
+      t.text :image_url
 
       t.timestamps
     end
@@ -372,7 +373,8 @@ Book.create([
             "In college, twenty-nine had seemed impossibly old. By now, she'd thought, she'd be married and have kids. But as each year went by, she didn't feel much different than she had before. Time kept going by and she was just here, the same.",
             "The thing is that you don't meet someone until you do ... and the older we get, the harder it is. And maybe not all of us will meet someone."
         ],
-        user_id: 1
+        user_id: 1,
+        image_url: "https://images-na.ssl-images-amazon.com/images/I/81h0iLMqPVL.jpg"
     },
     {
         isbn: "9781400031702",
@@ -390,7 +392,8 @@ Book.create([
             "Beauty is rarely soft or consolatory. Quite the contrary. Genuine beauty is always quite alarming.",
             "I suppose at one time in my life I might have had any number of stories, but now there is no other. This is the only story I will ever be able to tell."
         ],
-        user_id: 1
+        user_id: 1,
+        image_url: "https://www.hachette.co.uk/wp-content/uploads/2019/01/hbg-title-9781405529631-4.jpg?fit=441%2C675"
     },
     {
         isbn: "9780140283297",
@@ -406,7 +409,8 @@ Book.create([
             "p.130"
         ],
         quotes: [],
-        user_id: 1
+        user_id: 1,
+        image_url: "https://i.pinimg.com/originals/a5/dd/8e/a5dd8e875cf444fa67d24659054f94c3.jpg"
     },
     {
         isbn: "9780743273565",
@@ -418,9 +422,12 @@ Book.create([
         notes: [
         ],
         quotes: ["I hope she'll be a fool -- that's the best thing a girl can be in this world, a beautiful little fool"],
-        user_id: 1
+        user_id: 1,
+        image_url: "https://images-na.ssl-images-amazon.com/images/I/41iers+HLSL._SX326_BO1,204,203,200_.jpg"
     }
 ])
+
+puts "Seeded database"
 ```
 -------------
 Seed Data
